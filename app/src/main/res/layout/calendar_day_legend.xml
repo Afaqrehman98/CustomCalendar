@@ -1,0 +1,100 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/legendLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/legendText1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="58dp"
+        android:gravity="center"
+        android:text="S"
+        android:textColor="#7B7A81"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/legendText2"
+        app:layout_constraintEnd_toStartOf="@+id/legendText3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/legendText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="59dp"
+        android:layout_marginEnd="58dp"
+        android:gravity="center"
+        android:text="M"
+        android:textColor="#7B7A81"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/legendText3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/legendText3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="T"
+        android:textColor="#7B7A81"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/legendText2"
+        app:layout_constraintEnd_toStartOf="@+id/legendText4"
+        app:layout_constraintStart_toEndOf="@+id/legendText1" />
+
+    <TextView
+        android:id="@+id/legendText4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="58dp"
+        android:gravity="center"
+        android:text="W"
+        android:textColor="#7B7A81"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/legendText3"
+        app:layout_constraintEnd_toStartOf="@+id/legendText6"
+        app:layout_constraintStart_toEndOf="@+id/legendText3" />
+
+    <TextView
+        android:id="@+id/legendText5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="58dp"
+        android:gravity="center"
+        android:text="T"
+        android:textColor="#7B7A81"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/legendText4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/legendText2" />
+
+    <TextView
+        android:id="@+id/legendText6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="F"
+        android:textColor="#7B7A81"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/legendText5"
+        app:layout_constraintEnd_toStartOf="@+id/legendText7"
+        app:layout_constraintStart_toEndOf="@+id/legendText4" />
+
+    <TextView
+        android:id="@+id/legendText7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="S"
+        android:textColor="#7B7A81"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/legendText6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/legendText6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
