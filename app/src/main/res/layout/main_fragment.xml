@@ -2,32 +2,120 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     android:clickable="true"
     android:focusable="true"
+    android:padding="16dp"
     tools:context=".ui.main.MainFragment">
+
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_delivery_date"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/closeButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="24dp"
+        android:background="#999799"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+
+    <Button
+        android:id="@+id/monthButtonOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FCFAF4"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/monthButtonTwo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:strokeColor="@color/black"
+        app:strokeWidth="0.5dp" />
+
+    <Button
+        android:id="@+id/monthButtonTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FCFAF4"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/monthButtonThree"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/monthButtonOne"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:strokeColor="@color/black"
+        app:strokeWidth="0.5dp" />
+
+    <Button
+        android:id="@+id/monthButtonThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FCFAF4"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/monthButtonTwo"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:strokeColor="@color/black"
+        app:strokeWidth="0.5dp" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="16dp"
+        android:background="#999799"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monthButtonThree" />
+
 
     <include
         android:id="@+id/legendLayout"
         layout="@layout/calendar_day_legend"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
 
     <com.kizitonwose.calendarview.CalendarView
         android:id="@+id/exOneCalendar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:cv_dayViewResource="@layout/example_1_calendar_day"
-        app:cv_inDateStyle="allMonths"
         app:cv_orientation="horizontal"
-        app:cv_outDateStyle="endOfRow"
         app:cv_scrollMode="paged"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,6 +123,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/legendLayout"
         app:layout_constraintVertical_bias="0.0" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
